@@ -92,7 +92,7 @@ def train_single_hmm(X, emission_model, digit, n_states):
     A = initialize_transition_matrix(n_states)
     start_probs = initialize_starting_probabilities(n_states)
     end_probs = initialize_end_probabilities(n_states)
-    data = [x.astype(np.float32) for x in X]
+    data = [x.(np.float32) for x in X]
 
     model = DenseHMM(
         distributions=emission_model,
